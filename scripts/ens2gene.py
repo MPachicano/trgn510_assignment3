@@ -6,7 +6,7 @@ import csv
 
 ens2gene={}
 ## Build Dictionary
-with open ("mini.gtf", 'r') as file:
+with open ("Homo_sapiens.GRCh37.75.gtf", 'r') as file:
     for line in file:
         matches=re.findall('.*gene_id "(.*?)".*gene_name "(.*?)";',line)
         if matches:

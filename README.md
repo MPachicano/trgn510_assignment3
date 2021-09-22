@@ -46,11 +46,23 @@ Despite this issue, I do have the ability to pull out matches, and replace the E
 ## Usage
 This program is installable via git clone https://github.com/MPachicano/trgn510_assignment3.git.
 
+This program takes a csv file and attempts to create a histogram from the data file, and outputs a png file. 
 
-On the command-line: python3 histogram.py [-f][0-9] [file]
+Installations:
+python -m pip install --user pandas
+python -m pip install --user numpy
+python -m pip install --matplotlib
 
+The unit test I used for this program is 
+https://github.com/davcraig75/rna (use git clone to retrieve the file)
 
 ## Description
 Creates a histogram as a png file using a specified column in a tab delimited file.
 ## Known Issues 
+There are also going to be many 'Known Issues' for this program, as I was not able to succesfully program it to take any data file (no tsv). 
 
+1) This program can only read csv files. This is because I was unsure how to get the script to import a .tsv file, but I did learn that it can work with the 'import csv' module. I just need more time to research this.
+
+2) Another known issue is that I did not figure out how add the option '-f [#]' in order for the program to know which columns to plot. I wanted to use argparse for this (similar to previous script) but after many days, I could not get it to work properly. I will need to come back to this once I find out how to apply argeparse. 
+
+3) Although it does plot something... it does not necessarily plot what looks to be a histogram. Because of 'Known Issue #2', my program is trying to plot everything in the csv file. So, the output plot itself looks strange. The program does output a .png file, but it does not plot anything in it for some reason. I have to figure this out.  
